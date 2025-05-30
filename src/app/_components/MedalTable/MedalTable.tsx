@@ -2,6 +2,7 @@ import { CountryResult, SortKey } from "@/types";
 import style from "./MedalTable.module.css";
 import { useMemo } from "react";
 import Link from "next/link";
+import { Flag } from "../Flag/Flag";
 
 type Props = { sort: SortKey; countries: CountryResult[] };
 
@@ -49,7 +50,9 @@ export const MedalTable = ({ sort, countries }: Props) => {
         {sortedCountries.slice(0, 10).map((country, index) => (
           <tr key={country.code}>
             <td>{index + 1}</td>
-            <td>{country.code}</td>
+            <td>
+              <Flag country={country} />
+            </td>
             <td className={style.countryCode}>{country.code}</td>
             <td className={style.value}>{country.gold}</td>
             <td className={style.value}>{country.silver}</td>

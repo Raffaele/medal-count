@@ -22,7 +22,9 @@ export const MedalData = ({ sort }: Props) => {
     },
     retry: 0,
     select: (data) => {
-      const sortedCodes = data.map(({ code }) => code);
+      const sortedCodes = data
+        .map(({ code }) => code)
+        .sort((a, b) => a.localeCompare(b));
       return data.map((country) => {
         return {
           ...country,
