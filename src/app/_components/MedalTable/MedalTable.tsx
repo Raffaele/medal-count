@@ -32,16 +32,25 @@ export const MedalTable = ({ sort, countries }: Props) => {
       <thead>
         <tr>
           <th colSpan={3}></th>
-          <th>
-            <Link href={`?sort=${SortKey.GOLD}`}>G</Link>
+          <th className={sort === SortKey.GOLD ? style.active : ""}>
+            <Link
+              href={`?sort=${SortKey.GOLD}`}
+              className={style.medalGold}
+            ></Link>
           </th>
-          <th>
-            <Link href={`?sort=${SortKey.SILVER}`}>S</Link>
+          <th className={sort === SortKey.SILVER ? style.active : ""}>
+            <Link
+              href={`?sort=${SortKey.SILVER}`}
+              className={style.medalSilver}
+            ></Link>
           </th>
-          <th>
-            <Link href={`?sort=${SortKey.BRONZE}`}>B</Link>
+          <th className={sort === SortKey.BRONZE ? style.active : ""}>
+            <Link
+              href={`?sort=${SortKey.BRONZE}`}
+              className={style.medalBronze}
+            ></Link>
           </th>
-          <th>
+          <th className={sort === SortKey.TOTAL ? style.active : ""}>
             <Link href={`?sort=${SortKey.TOTAL}`}>TOTAL</Link>
           </th>
         </tr>
@@ -49,7 +58,7 @@ export const MedalTable = ({ sort, countries }: Props) => {
       <tbody>
         {sortedCountries.slice(0, 10).map((country, index) => (
           <tr key={country.code}>
-            <td>{index + 1}</td>
+            <td className={style.rank}>{index + 1}</td>
             <td>
               <Flag country={country} />
             </td>

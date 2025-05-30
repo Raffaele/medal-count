@@ -1,9 +1,8 @@
 .medalTable {
   border-collapse: collapse;
-  margin: 3rem;
 
   thead {
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid #777;
   }
 
   tbody > tr {
@@ -26,4 +25,34 @@
     text-align: left;
     padding-right: 8rem;
   }
+
+  .rank {
+    text-align: right;
+  }
+
+  .medalGold, .medalSilver, .medalBronze {
+    text-align: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .active {
+    border-top: 3px #777 solid;
+  }
+
+  .medalGold {
+    background-color: gold;
+  }
+
+  .medalSilver {
+    background-color: silver;
+  }
+
+  .medalBronze {
+    background-color: #cd7f32;
+  }
+
+  
 }
