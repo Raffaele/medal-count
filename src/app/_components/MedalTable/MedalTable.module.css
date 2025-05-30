@@ -2,11 +2,11 @@
   border-collapse: collapse;
 
   thead {
-    border-bottom: 3px solid #777;
+    border-bottom: 3px solid var(--main-style-color);
   }
 
   tbody > tr {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--main-style-color);
   }
 
   th, td {
@@ -39,7 +39,7 @@
   }
 
   .active {
-    border-top: 3px #777 solid;
+    border-top: 3px var(--main-style-color) solid;
   }
 
   .medalGold {
