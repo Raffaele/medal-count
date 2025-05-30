@@ -2,7 +2,8 @@
 
 import { CountryResult, SortKey } from "@/types";
 import { useQuery } from "@tanstack/react-query";
-import style from "./MedalLoading.module.css";
+import style from "./MedalData.module.css";
+import { MedalTable } from "../MedalTable/MedalTable";
 
 type Props = { sort: SortKey };
 
@@ -41,15 +42,5 @@ export const MedalData = ({ sort }: Props) => {
         <button onClick={() => refetch()}>RETRY</button>
       </div>
     );
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  );
+  return <MedalTable sort={sort} countries={countries} />;
 };

@@ -1,0 +1,29 @@
+.medalTable {
+  border-collapse: collapse;
+  margin: 3rem;
+
+  thead {
+    border-bottom: 3px solid #333;
+  }
+
+  tbody > tr {
+    border-bottom: 1px solid #333;
+  }
+
+  th, td {
+    padding: 0.5rem;
+  }
+
+  th, td.value, td.total {
+    text-align: center;
+  }
+
+  td.total {
+    font-weight: bold;
+  }
+
+  td.countryCode {
+    text-align: left;
+    padding-right: 8rem;
+  }
+}
