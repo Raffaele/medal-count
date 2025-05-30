@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Metadata } from "next";
 import { SortKey } from "@/types";
-import { MedalTable } from "./_components/MedalTable/MedalTable";
+import { MedalData } from "./_components/MedalData/MedalData";
 
 export const metadata: Metadata = {
   title: "Medals",
@@ -18,7 +18,7 @@ export default async function Home({ searchParams }: Props) {
 
   return (
     <main>
-      <MedalTable sort={sort} />
+      <MedalData sort={sort} />
     </main>
   );
 }

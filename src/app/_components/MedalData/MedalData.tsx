@@ -2,11 +2,11 @@
 
 import { CountryResult, SortKey } from "@/types";
 import { useQuery } from "@tanstack/react-query";
-import style from "./MedalTable.module.css";
+import style from "./MedalLoading.module.css";
 
 type Props = { sort: SortKey };
 
-export const MedalTable = ({ sort }: Props) => {
+export const MedalData = ({ sort }: Props) => {
   const {
     isLoading,
     isError,
