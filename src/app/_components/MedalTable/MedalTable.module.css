@@ -1,0 +1,29 @@
+.loadingPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.errorPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: xx-large;
+  font-weight: bold;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    font-size: large;
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+  }
+}
